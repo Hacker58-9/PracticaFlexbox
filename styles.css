@@ -1,0 +1,130 @@
+body, header, h1, h2, nav, header, div, img, ul, li, a {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #7b7;
+    color: #eee;
+}
+/*HEADER - SECTION*/
+.header {
+    min-height: 100vh;
+    background-image: url(IMAGENES/Header\ Background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    text-wrap: balance;
+}
+
+.header__overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #7b78;
+    z-index: 1;
+}
+
+.header__container {
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+}
+
+.header__container p {
+    text-wrap: pretty;    
+}
+.header__image {     
+    min-width: 150px;   
+    max-width: 40%;         
+    border-radius: 50%; 
+    border: 10px solid #ddd;
+    margin: 40px;   
+}
+
+/*NAV - SECTION*/
+.nav {
+    background-color: #ddd;
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-evenly;
+    gap: 50px; 
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px #3339;         
+}
+.nav__logo {
+    width: 100px;
+    height: 100px;
+    background-image: url(IMAGENES/Pollito.jpg); 
+    border-radius: 50%;   
+}
+.nav__list { 
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 20px;     
+}
+.list__item{   
+    list-style: none;  
+    min-height: 1.5rem;
+    border-radius: 30px;       
+    outline:0px solid #ddd;
+    transition: background-color 0.4s, outline 0.4s, outline-offset 0.4s;  
+}
+.list__link{
+    display: inline-block;
+    padding: 20px 50px;                  
+    text-decoration: none;    
+    font-weight: bold;      
+    text-wrap: nowrap; 
+    color: #7b7; 
+    transition: font-size 0.4s, color 0.4s;            
+}
+.list__item:has(.list__link:hover) {
+    background-color: #7b77;
+    color: #eee;
+    font-size: 1.5rem;
+    outline: 3px solid #7b7b;
+    outline-offset: -10px; 
+}
+.link--login {
+    color: #eee;
+    font-size: 1.2rem;
+    padding: 25px 60px;
+}
+.list__item:has(.link--login) {
+    background-color: #7b7;    
+    margin-left: 20px;       
+    border-radius:40px ;
+}
+
+.link--login:hover {
+    font-size: 1.7rem;    
+}
+
+.list__item:has(.link--login:hover) {
+    background-color: #393;
+    outline-offset: -15px;
+}
+
+section {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    font-size: 20px;
+    text-wrap: pretty;
+}
